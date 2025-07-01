@@ -28,7 +28,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet publish /p:NativeLib=Shared --runtime linux-x64 --configuration release
+      run: dotnet publish /p:NativeLib=Shared --runtime linux-x64 --configuration release --self-contained false
     
     
     - name: Upload
